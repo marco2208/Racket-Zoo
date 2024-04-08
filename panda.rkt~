@@ -1,7 +1,6 @@
 ; Marco Erazo
 
 #lang slideshow
-(provide panda_scene)
 
 (require 2htdp/image)
 
@@ -103,6 +102,7 @@
 
 
 
+(panda_scene 200)
 
 
 

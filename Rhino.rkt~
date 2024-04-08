@@ -1,7 +1,5 @@
 ;Eric Nunez Rodriguez
 #lang slideshow
-(provide rhino)
-
 (require 2htdp/image)
 
 (define (head-frame n)

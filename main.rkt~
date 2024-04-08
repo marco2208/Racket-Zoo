@@ -1,0 +1,11 @@
+#lang slideshow
+
+(require 2htdp/image)
+
+(require "panda.rkt")
+(require "Rhino.rkt")
+
+
+
+
+(panda_scene 200)

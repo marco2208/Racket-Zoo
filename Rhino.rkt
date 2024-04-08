@@ -81,5 +81,30 @@
 (define (full-body n)
   (beside (body n) (tail n)))
 
+(define (rock1 n)
+  (overlay/offset
+             (overlay/offset (circle (/ n 1.9) "solid" "gray")
+                  10 -30
+                  (circle (/ n 1.9) "solid" "gray"))
+                  40 -10
+             (overlay/offset (circle (/ n 1.9) "solid" "gray")
+                  50 25
+                  (circle (/ n 1.9) "solid" "gray"))))
+
+(define (rock2 n)
+  (overlay/offset
+             (overlay/offset (circle (/ n 2.5) "solid" "gray")
+                  30 0
+                  (circle (/ n 2.5) "solid" "gray"))
+                  35 -20
+             (overlay/offset (circle (/ n 2.5) "solid" "gray")
+                  60 15
+                  (circle (/ n 2.5) "solid" "gray"))))
+
+
+(define (animal n)
+   (beside (full-head n) (full-body n)))
+
 (define (rhino n)
-  (beside (full-head n) (full-body n))) 
+  (beside/align "bottom" (rock1 n) (animal n) (rock2 n)))
+

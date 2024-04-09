@@ -1,7 +1,5 @@
 ;Eric Nunez Rodriguez
 #lang slideshow
-(provide rhino)
-
 (require 2htdp/image)
 
 (define (head-frame n)
@@ -43,7 +41,7 @@
 
 (define (move n)
   (above/align "right"
-   (rectangle 35 35 "solid" "white")
+   (rectangle 35 35 "solid" "transparent")
    (head n)))
 
 (define (full-head n)
@@ -55,7 +53,7 @@
 
 (define (body n)
   (above
-   (rectangle 35 35 "solid" "white")
+   (rectangle 35 35 "solid" "transparent")
    (beside/align "bottom"
                 (above
                  (rectangle (+ n 20) (+ n 20) "solid" "dark gray")
@@ -74,7 +72,7 @@
 
 (define (tail n)
   (beside/align "bottom"
-                (add-curve (rectangle (/ n 2) (/ n 2) "solid" "white")
+                (add-curve (rectangle (/ n 2) (/ n 2) "solid" "transparent")
                            0 (/ n 5) 0 0.7
                            (/ n 2) (/ n 2.2) 0 0.7
                            "black")
@@ -109,4 +107,3 @@
 
 (define (rhino n)
   (beside/align "bottom" (rock1 n) (animal n) (rock2 n)))
-

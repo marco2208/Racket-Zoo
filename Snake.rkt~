@@ -1,8 +1,6 @@
 #lang racket
 (require 2htdp/image)
 
-(provide draw-snake)
-
 (define (draw-snake n)
   ;; Define eye and eyes
   (define eye (overlay (circle 2 'solid 'black) (circle 8 'solid 'white)))
@@ -18,7 +16,7 @@
                  (circle 20 'solid 'green))))
   
   ;; Define body segments as a list of green circles
-  (define body-segments (make-list (/ n 10) (circle 10 'solid 'green)))
+  (define body-segments (make-list n (circle 10 'solid 'green)))
   
   ;; Define body which will align vertically with body segments
   (define body (apply beside/align "bottom" body-segments))

@@ -1,13 +1,12 @@
 #lang racket
 
 (require 2htdp/image)
-(provide penguin)
 
-(define n 15)
+(define n 70)
 
 ;All body parts and shading 
 (define head (circle (* 2 n) "solid" "black"))
-(define beak (triangle/sss (* n 2) (* n 2) (* n 2) "solid" "orange"))
+(define beak (triangle/sss 80 100 140 "solid" "orange"))
 (define body (ellipse (* 6 n) (* 10 n) "solid" "black"))
 (define belly (ellipse (* 3 n) (* 8 n) "solid" "grey"))
 (define tone (ellipse (* 1.9 n) (* 1.6 n) "solid" "yellow"))

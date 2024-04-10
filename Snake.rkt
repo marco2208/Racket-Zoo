@@ -10,7 +10,7 @@
  (define tongue (overlay (rotate -15 (line 15 1 'red))
                         (rotate 15 (line 15 1 'red))))
 
-  ;; Define head with eyes, tongue, and green circle
+  ;; Define head with eyes, tongue, and green circle for body
   (define head (overlay/xy tongue 0 -20
                (overlay/xy eyes 1 0
                  (circle 20 'solid 'green))))
@@ -18,7 +18,7 @@
   ;; Define body segments as a list of green circles
   (define body-segments (make-list n (circle 10 'solid 'green)))
   
-  ;; Create body by aligning body segments vertically
+  ;; Define body which will align vertically with body segments
   (define body (apply beside/align "bottom" body-segments))
   
   ;; Overlay head on top of the aligned body
